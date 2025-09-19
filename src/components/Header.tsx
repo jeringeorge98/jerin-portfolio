@@ -90,8 +90,8 @@ const Header = () => {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       >
-        <p>ryoichi</p>
-        <p>homma</p>
+        <p>Jerin</p>
+        <p>George</p>
       </div>
       <div className="relative lg:flex lg:w-full lg:justify-center">
         {/* Menu/Close icon for small and middle screens */}
