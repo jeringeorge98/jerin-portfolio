@@ -8,17 +8,24 @@ export const navRoutes = [
     icon: <FaHome />,
   },
   {
-    id: "experience",
-    label: "Experience",
-    href: "#experience",
-    icon: <FaHome />,
-  },
-  {
     id: "projects",
     label: "Projects",
     href: "#projects",
     icon: <FaHome />,
   },
+  {
+    id: "skills",
+    label: "Skills",
+    href: "#skills",
+    icon: <FaHome />,
+  },
+  {
+    id: "experience",
+    label: "Experience",
+    href: "#experience",
+    icon: <FaHome />,
+  },
+
   {
     id: "contact",
     label: "Contact",

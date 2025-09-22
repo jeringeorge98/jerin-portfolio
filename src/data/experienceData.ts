@@ -23,6 +23,17 @@ export const experienceData: IExperienceData[] = [
   },
   {
     id: 2,
+    title: "Research Intern",
+    date: "September 2024- April 2025",
+    organization: "Autonomous Driving Lab, University of Tartu",
+    location: "Tartu, Estonia",
+    desc: "Built a research prototype for the ADL Lab, The application helped connect the autonomous vehicle to a web interface.Messsage brokers Like MQTT were used to transmit message from the car to the web application.",
+    link: "https://www.traxi.ut.ee/",
+    skills: ["Python", "Flask", "MQTT", "Docker"],
+  },
+
+  {
+    id: 3,
     title: "Freelance Web Developer",
     date: "November 2023 - April 2024",
     organization: "Eesti Ettevotted (Client)",
@@ -30,7 +41,7 @@ export const experienceData: IExperienceData[] = [
     skills: ["Typescript", "React.js", "Github Actions", "Tailwind CSS"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Software Engineer",
     date: "August 2020 - July 2023",
     link: "https://platformcommons.org/",

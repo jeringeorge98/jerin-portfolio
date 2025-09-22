@@ -4,6 +4,11 @@ import App from "./App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <div
+      id="root"
+      className="max-w-screen-xl mx-auto p-8 text-center antialiased"
+    >
+      <App />
+    </div>
   </StrictMode>
 );
