@@ -39,7 +39,7 @@ export default function AboutSection() {
             </motion.div>
             <motion.div
               className="flex flex-row justify-center sm:justify-start -mx-16 sm:-mx-20 md:-mx-0 sm:-ml-7 md:-ml-0
-                  text-2xl sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem] xl:text-[3.5rem] text-white text-shadow-neon star-wars-font"
+                  text-2xl sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem] xl:text-[3.5rem] text-yellow-500 text-shadow-neon star-wars-font"
               initial={{
                 opacity: 0,
                 x: isMobile ? 0 : -200,

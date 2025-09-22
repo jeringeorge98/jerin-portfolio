@@ -81,7 +81,7 @@ const ReactHookForm = () => {
       <SpotlightCard>
         <form
           className="relative flex flex-col gap-y-6 py-8 pb-11 md:pb-14 lg:pb-20 border rounded-3xl
-          border-[rgba(75,30,133,0.5)] bg-[linear-gradient(150deg,rgba(75,30,133,0.8),rgb(0,0,0))]"
+          border-[rgba(75,30,133,0.5)] bg-[linear-gradient(150deg,rgba(75,30,133,0.8),rgb(0,0,0))] text-white placeholder:text-white"
         >
           <div className="flex flex-row gap-x-2 items-center justify-center mt-2 text-base md:text-lg lg:text-xl">
             <ImRocket />
