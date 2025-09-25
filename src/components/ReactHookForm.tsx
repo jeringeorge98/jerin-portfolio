@@ -39,7 +39,7 @@ const ReactHookForm = () => {
     setFormStatus(null);
 
     // Validate email address before sending the email with EmailJS
-    const isEmailValid = await validateEmail(data.email);
+    const isEmailValid = validateEmail(data.email);
     if (!isEmailValid) {
       setEmailStatus({
         message: "Email address is invalid",
