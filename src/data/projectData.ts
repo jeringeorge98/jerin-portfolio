@@ -1,4 +1,4 @@
-import { IoLogoGithub, IoLogoYoutube, IoMdOpen } from "react-icons/io";
+import { IoLogoGithub } from "react-icons/io";
 import {
   SiAmazons3,
   SiAmazonwebservices,

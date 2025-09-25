@@ -1,4 +1,3 @@
-import React from "react";
 import ExperienceTimeline from "../components/ExperienceTimeline";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";

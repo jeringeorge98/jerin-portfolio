@@ -23,9 +23,8 @@ import {
   SiTypescript,
   SiMqtt,
 } from "react-icons/si";
-import { FaPlus } from "react-icons/fa";
+
 import { FaLocationDot } from "react-icons/fa6";
-import { IoMdClose } from "react-icons/io";
 import { TbBrandCSharp, TbSql } from "react-icons/tb";
 import { AiOutlineJava } from "react-icons/ai";
 
@@ -60,7 +59,7 @@ const iconMap: { [key: string]: JSX.Element | string } = {
 };
 
 const ExperienceTimeline = () => {
-  const [experiences, setExperiences] = useState(experienceData.slice(0, 3));
+  const [experiences] = useState(experienceData.slice(0, 3));
 
   return (
     <>

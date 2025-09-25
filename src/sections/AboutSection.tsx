@@ -2,8 +2,8 @@ import { useMediaQuery } from "react-responsive";
 import Typewriter from "typewriter-effect";
 import ScrollDown from "../components/ScrollDown";
 import DownloadButton from "../components/DownloadButton";
-import Avatar from "../components/Avatar";
-import Hero from "../components/Hero";
+// import Avatar from "../components/Avatar";
+// import Hero from "../components/Hero";
 import { motion } from "framer-motion";
 export default function AboutSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });

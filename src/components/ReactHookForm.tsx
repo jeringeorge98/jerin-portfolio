@@ -6,8 +6,8 @@ import { contactFormSchema } from "../lib/contact-form-types";
 import Spotlight, { SpotlightCard } from "../ui/spotlight-card";
 import { ImRocket } from "react-icons/im";
 import { MdError, MdCheckCircle } from "react-icons/md";
-// import { validateEmail } from "../api/emailValidatorWithZeroBounceApi";
-// import { sendEmailWithEmailjs } from "../api/autoReplyWithEmailJsApi";
+import { validateEmail } from "../api/emailValidator";
+import { sendEmailWithEmailjs } from "../api/emailWithJs";
 
 const ReactHookForm = () => {
   // State for email validation status
@@ -34,52 +34,53 @@ const ReactHookForm = () => {
     }
   );
 
-  //   const onSubmit = async (data: TContactFormSchema) => {
-  //     setEmailStatus(null);
-  //     setFormStatus(null);
+  const onSubmit = async (data: TContactFormSchema) => {
+    setEmailStatus(null);
+    setFormStatus(null);
 
-  //     // Validate email address before sending the email with EmailJS
-  //     const isEmailValid = await validateEmail(data.email);
-  //     if (!isEmailValid) {
-  //       setEmailStatus({
-  //         message: "Email address is invalid",
-  //         color: "text-red-600",
-  //       });
-  //       return;
-  //     } else {
-  //       setEmailStatus({
-  //         message: "Email address is valid",
-  //         color: "text-green-600",
-  //       });
-  //     }
+    // Validate email address before sending the email with EmailJS
+    const isEmailValid = await validateEmail(data.email);
+    if (!isEmailValid) {
+      setEmailStatus({
+        message: "Email address is invalid",
+        color: "text-red-600",
+      });
+      return;
+    } else {
+      setEmailStatus({
+        message: "Email address is valid",
+        color: "text-green-600",
+      });
+    }
 
-  //     // Send email with EmailJS and handle success/failure
-  //     await sendEmailWithEmailjs(data)
-  //       .then(() => {
-  //         setFormStatus({
-  //           message: "Submitted the form successfully!",
-  //           color: "text-green-600",
-  //         });
+    // Send email with EmailJS and handle success/failure
+    await sendEmailWithEmailjs(data)
+      .then(() => {
+        setFormStatus({
+          message: "Submitted the form successfully!",
+          color: "text-green-600",
+        });
 
-  //         // Reset the form fields, emailStatus, and formStatus ONLY after a delay of successful form submission
-  //         setTimeout(() => {
-  //           setEmailStatus(null);
-  //           setFormStatus(null);
-  //           reset();
-  //         }, 5000);
-  //       })
-  //       .catch(() => {
-  //         setFormStatus({
-  //           message: "Failed to submit the form. Please try again",
-  //           color: "text-red-600",
-  //         });
-  //       });
-  //   };
+        // Reset the form fields, emailStatus, and formStatus ONLY after a delay of successful form submission
+        setTimeout(() => {
+          setEmailStatus(null);
+          setFormStatus(null);
+          reset();
+        }, 5000);
+      })
+      .catch(() => {
+        setFormStatus({
+          message: "Failed to submit the form. Please try again",
+          color: "text-red-600",
+        });
+      });
+  };
 
   return (
     <Spotlight className="relative md:-mx-5 lg:mx-0">
       <SpotlightCard>
         <form
+          onSubmit={handleSubmit(onSubmit)}
           className="relative flex flex-col gap-y-6 py-8 pb-11 md:pb-14 lg:pb-20 border rounded-3xl
           border-[rgba(75,30,133,0.5)] bg-[linear-gradient(150deg,rgba(75,30,133,0.8),rgb(0,0,0))] text-white placeholder:text-white"
         >

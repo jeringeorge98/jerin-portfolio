@@ -12,7 +12,6 @@ import {
   SiGithubactions,
   SiNodedotjs,
   SiReact,
-  SiOracle,
   SiAmazonwebservices,
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";

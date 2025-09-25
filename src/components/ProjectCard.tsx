@@ -17,8 +17,8 @@ const ProjectCard = ({ genre }: ProjectCardsProps) => {
   );
 
   //   // Masks for the image to show/hide
-  //   const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-  //   const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+  const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+  const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
   const handleViewportEnter = (index: number) => {
     setInViewStates((prev) => {
@@ -51,6 +51,11 @@ const ProjectCard = ({ genre }: ProjectCardsProps) => {
               className="rounded-lg overflow-hidden -mt-6 md:-mt-4 border-2 border-gray-400"
               initial={false}
               transition={{ delay: 0.5, duration: 1 }}
+              animate={
+                isLoaded && inViewStates[index]
+                  ? { maskImage: visibleMask } // Show the image with a mask
+                  : { maskImage: hiddenMask } // Hide the image with a mask
+              }
               onViewportEnter={() => handleViewportEnter(index)} // Set the state to true when the image is in view to show the image
             >
               <img
