@@ -1,5 +1,6 @@
 {
   "name": "new-portfolio-vite",
+  "homepage": "https://jeringeorge98.github.io/jerin-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -16,6 +19,7 @@
     "clsx": "^2.1.1",
     "cobe": "^0.6.5",
     "framer-motion": "^12.23.12",
+    "gh-pages": "^6.3.0",
     "next-themes": "^0.4.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
