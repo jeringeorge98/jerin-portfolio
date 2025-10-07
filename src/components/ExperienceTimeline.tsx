@@ -4,7 +4,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experienceData } from "../data/experienceData";
-import { useState, type JSX } from "react";
+import { useRef, useState, type JSX } from "react";
 import {
   SiAxios,
   SiC,
@@ -62,7 +62,7 @@ const iconMap: { [key: string]: JSX.Element | string } = {
 const ExperienceTimeline = () => {
   const [experiences, setExperience] = useState(experienceData.slice(0, 3));
   const [isExpanded, setIsExpanded] = useState(false);
-  const loadMoreRef = useState<HTMLButtonElement | null>(null);
+  const loadMoreRef = useRef<HTMLButtonElement>(null);
   const [, setHasMore] = useState(true);
   const [loadMorePosition, setLoadMorePosition] = useState<number | null>(null); // to store the position of the "Load more" button
   const toggleCredential = () => {
