@@ -7,8 +7,14 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiReact,
+  SiPython,
+  SiDocker,
+  SiJupyter,
+  SiPandas,
 } from "react-icons/si";
 import rag_chatbot from "../assets/images/rag_chatbot.png";
+import portfolio from "../assets/images/portfolio.png";
+import stockpredictor from "../assets/images/Ml-finance-project.png";
 export const projectData = [
   {
     id: 1,
@@ -39,7 +45,7 @@ export const projectData = [
     title: "Personal Portfolio Website",
     desc: "A personal portfolio website to showcase my projects and skills. Desigend inspired by Star Wars theme.",
     genre: "Web Development",
-    image: "",
+    image: portfolio,
     links: [
       {
         icon: IoLogoGithub,
@@ -51,6 +57,26 @@ export const projectData = [
       { icon: SiReact, name: "React" },
       { icon: SiTailwindcss, name: "Tailwind CSS" },
       { icon: SiTypescript, name: "TypeScript" },
+    ],
+  },
+  {
+    id: 3,
+    title: "Stock Price Predictor",
+    desc: "A project using the yfinance data to predict stock prices using machine learning algorithms.Written in python using jupyter notebook.",
+    genre: "AI/ML",
+    image: stockpredictor,
+    links: [
+      {
+        icon: IoLogoGithub,
+        text: "GitHub",
+        url: "https://github.com/jeringeorge98/ml-notebooks/stock_predictor",
+      },
+    ],
+    tech_used: [
+      { icon: SiPython, name: "Python" },
+      { icon: SiJupyter, name: "Jupyter Notebook" },
+      { icon: SiDocker, name: "Docker" },
+      { icon: SiPandas, name: "Pandas" },
     ],
   },
 ];

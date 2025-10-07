@@ -5,6 +5,7 @@ import DownloadButton from "../components/DownloadButton";
 // import Avatar from "../components/Avatar";
 // import Hero from "../components/Hero";
 import { motion } from "framer-motion";
+import SocialIcons from "../components/SocialIcons";
 export default function AboutSection() {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   return (
@@ -111,7 +112,7 @@ export default function AboutSection() {
                 transition={{ delay: isMobile ? 0 : 0.5, duration: 1.5 }}
                 viewport={{ once: true }}
               >
-                {/* <SocialIcons /> */}
+                <SocialIcons />
               </motion.div>
             </div>
           </div>

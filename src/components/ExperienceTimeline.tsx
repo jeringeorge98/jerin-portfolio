@@ -24,9 +24,10 @@ import {
   SiMqtt,
 } from "react-icons/si";
 
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaPlus } from "react-icons/fa6";
 import { TbBrandCSharp, TbSql } from "react-icons/tb";
 import { AiOutlineJava } from "react-icons/ai";
+import { IoMdClose } from "react-icons/io";
 
 const iconMap: { [key: string]: JSX.Element | string } = {
   Axios: <SiAxios />,
@@ -59,7 +60,25 @@ const iconMap: { [key: string]: JSX.Element | string } = {
 };
 
 const ExperienceTimeline = () => {
-  const [experiences] = useState(experienceData.slice(0, 3));
+  const [experiences, setExperience] = useState(experienceData.slice(0, 3));
+  const [isExpanded, setIsExpanded] = useState(false);
+  const loadMoreRef = useState<HTMLButtonElement>(null);
+  const [, setHasMore] = useState(true);
+  const [loadMorePosition, setLoadMorePosition] = useState<number | null>(null); // to store the position of the "Load more" button
+  const toggleCredential = () => {
+    if (isExpanded) {
+      setExperience(experienceData.slice(0, 3)); // Reset to initial credential
+      setHasMore(true);
+      if (loadMorePosition !== null) {
+        window.scrollTo({ top: loadMorePosition, behavior: "auto" }); // Set the scroll position to the stored position without scrolling
+      }
+    } else {
+      setLoadMorePosition(window.scrollY); // Store the current scroll position
+      setExperience(experienceData); // Load all credential
+      setHasMore(false); // No more credential to load
+    }
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <>
@@ -169,25 +188,25 @@ const ExperienceTimeline = () => {
             alignItems: "center",
             justifyContent: "center",
           }}
-          // icon={
-          //   <button
-          //     onClick={toggleCredential}
-          //     className="flex"
-          //     ref={loadMoreRef} // Reference to the "Load more" button
-          //   >
-          //     {isExpanded ? (
-          //       <div className="flex items-center gap-x-28 lg:gap-x-[8.25rem]">
-          //         <IoMdClose className="-mb-2.5 md:mb-3" />
-          //         <div className="font-semibold text-[#8a9198]">Close</div>
-          //       </div>
-          //     ) : (
-          //       <div className="flex items-center w-max gap-x-36 lg:gap-x-[10.5rem]">
-          //         <FaPlus className="-mb-2.5 md:mb-3" />
-          //         <div className="font-semibold text-[#8a9198]">Load more</div>
-          //       </div>
-          //     )}
-          //   </button>
-          // }
+          icon={
+            <button
+              onClick={toggleCredential}
+              className="flex"
+              ref={loadMoreRef} // Reference to the "Load more" button
+            >
+              {isExpanded ? (
+                <div className="flex items-center gap-x-28 lg:gap-x-[8.25rem]">
+                  <IoMdClose className="-mb-2.5 md:mb-3" />
+                  <div className="font-semibold text-[#8a9198]">Close</div>
+                </div>
+              ) : (
+                <div className="flex items-center w-max gap-x-36 lg:gap-x-[10.5rem]">
+                  <FaPlus className="-mb-2.5 md:mb-3" />
+                  <div className="font-semibold text-[#8a9198]">Load more</div>
+                </div>
+              )}
+            </button>
+          }
         />
       </VerticalTimeline>
     </>

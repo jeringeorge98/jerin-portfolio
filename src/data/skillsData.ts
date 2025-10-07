@@ -13,9 +13,16 @@ import {
   SiNodedotjs,
   SiReact,
   SiAmazonwebservices,
+  SiMysql,
+  SiSpringboot,
+  SiDocker,
+  SiNumpy,
+  SiPandas,
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 import { FaJava } from "react-icons/fa";
+import { color, progress } from "framer-motion";
+import { icons } from "./iconCloudData";
 export interface Skill {
   name: string;
   icon: React.ComponentType<{ size: string; color: string }>;
@@ -95,9 +102,9 @@ export const skillsData = [
         progress: 60,
       },
       {
-        name: "Python",
-        icon: SiPython,
-        color: "#3776AB",
+        name: "Spring Boot",
+        icon: SiSpringboot,
+        color: "#4479A1",
         progress: 50,
       },
     ],
@@ -119,12 +126,6 @@ export const skillsData = [
         progress: 80,
       },
       {
-        name: "GitHub",
-        icon: SiGithub,
-        color: "#8730A5",
-        progress: 70,
-      },
-      {
         name: "GitHub Actions",
         icon: SiGithubactions,
         color: "#2088FF",
@@ -135,6 +136,42 @@ export const skillsData = [
         icon: VscAzure,
         color: "#0089D6",
         progress: 40,
+      },
+      {
+        name: "Docker",
+        icon: SiDocker,
+        color: "#2496ED",
+        progress: 40,
+      },
+    ],
+  },
+  {
+    id: 4,
+    category: "Data and Analytics",
+    skills: [
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        color: "#00FF00",
+        progress: 60,
+      },
+      {
+        name: "Python",
+        icon: SiPython,
+        color: "#DC143C",
+        progress: 70,
+      },
+      {
+        name: "NumPy",
+        icon: SiNumpy,
+        color: "#FFD700",
+        progress: 50,
+      },
+      {
+        name: "Pandas",
+        icon: SiPandas,
+        color: "#DC143C",
+        progress: 70,
       },
     ],
   },
