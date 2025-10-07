@@ -62,7 +62,7 @@ const iconMap: { [key: string]: JSX.Element | string } = {
 const ExperienceTimeline = () => {
   const [experiences, setExperience] = useState(experienceData.slice(0, 3));
   const [isExpanded, setIsExpanded] = useState(false);
-  const loadMoreRef = useState<HTMLButtonElement>(null);
+  const loadMoreRef = useState<HTMLButtonElement | null>(null);
   const [, setHasMore] = useState(true);
   const [loadMorePosition, setLoadMorePosition] = useState<number | null>(null); // to store the position of the "Load more" button
   const toggleCredential = () => {

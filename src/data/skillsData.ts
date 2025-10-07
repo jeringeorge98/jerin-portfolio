@@ -8,7 +8,6 @@ import {
   SiPython,
   SiMongodb,
   SiGit,
-  SiGithub,
   SiGithubactions,
   SiNodedotjs,
   SiReact,
@@ -21,8 +20,7 @@ import {
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
 import { FaJava } from "react-icons/fa";
-import { color, progress } from "framer-motion";
-import { icons } from "./iconCloudData";
+
 export interface Skill {
   name: string;
   icon: React.ComponentType<{ size: string; color: string }>;
