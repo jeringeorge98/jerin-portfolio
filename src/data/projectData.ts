@@ -69,7 +69,7 @@ export const projectData = [
       {
         icon: IoLogoGithub,
         text: "GitHub",
-        url: "https://github.com/jeringeorge98/ml-notebooks/stock_predictor",
+        url: "https://github.com/jeringeorge98/ml-notebooks",
       },
     ],
     tech_used: [
@@ -95,6 +95,6 @@ export const filterProjects = (genre: string) => {
   return projectData.filter((project) =>
     Array.isArray(project.genre)
       ? project.genre.includes(genre)
-      : project.genre === genre
+      : project.genre === genre,
   );
 };
