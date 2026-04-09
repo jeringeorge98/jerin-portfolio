@@ -14,6 +14,8 @@ import {
   SiFastapi,
   SiPostgresql,
   SiTrpc,
+  SiSpringboot,
+  SiApachekafka,
 } from "react-icons/si";
 import rag_chatbot from "../assets/images/rag_chatbot.png";
 import portfolio from "../assets/images/portfolio.png";
@@ -91,7 +93,7 @@ export const projectData = [
       {
         icon: IoLogoGithub,
         text: "GitHub",
-        url: "https://github.com/jeringeorge98/ml-notebooks",
+        url: "https://github.com/jeringeorge98/checkout-system-distributed-systems",
       },
     ],
     tech_used: [
@@ -104,22 +106,21 @@ export const projectData = [
   },
   {
     id: 5,
-    title: "Springboot Application",
-    desc: "",
+    title: "AiTweet-Injestion-Microservice",
+    desc: "Srpingboot application that generates tweets from genAi.",
     genre: "Backend Development",
     links: [
       {
         icon: IoLogoGithub,
         text: "GitHub",
-        url: "https://github.com/jeringeorge98/ml-notebooks",
+        url: "https://github.com/jeringeorge98/ai-generated-tweet-injestion",
       },
     ],
     tech_used: [
-      { icon: SiPython, name: "Python" },
+      { icon: SiSpringboot, name: "JAVA Springboot" },
       { icon: SiDocker, name: "Docker" },
-      { icon: SiFastapi, name: "FastAPI" },
+      { icon: SiApachekafka, name: "Kafka" },
       { icon: SiPostgresql, name: "PostGreSQL" },
-      { icon: SiTrpc, name: "GRPC" },
     ],
   },
 ];
