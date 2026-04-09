@@ -11,6 +11,9 @@ import {
   SiDocker,
   SiJupyter,
   SiPandas,
+  SiFastapi,
+  SiPostgresql,
+  SiTrpc,
 } from "react-icons/si";
 import rag_chatbot from "../assets/images/rag_chatbot.png";
 import portfolio from "../assets/images/portfolio.png";
@@ -77,6 +80,46 @@ export const projectData = [
       { icon: SiJupyter, name: "Jupyter Notebook" },
       { icon: SiDocker, name: "Docker" },
       { icon: SiPandas, name: "Pandas" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Distributed Checkout System",
+    desc: "A project built with python and fastAPI displaying different protocols and consensus algorithmn for distributed systems development.",
+    genre: "Backend Development",
+    links: [
+      {
+        icon: IoLogoGithub,
+        text: "GitHub",
+        url: "https://github.com/jeringeorge98/ml-notebooks",
+      },
+    ],
+    tech_used: [
+      { icon: SiPython, name: "Python" },
+      { icon: SiDocker, name: "Docker" },
+      { icon: SiFastapi, name: "FastAPI" },
+      { icon: SiPostgresql, name: "PostGreSQL" },
+      { icon: SiTrpc, name: "GRPC" },
+    ],
+  },
+  {
+    id: 5,
+    title: "Springboot Application",
+    desc: "",
+    genre: "Backend Development",
+    links: [
+      {
+        icon: IoLogoGithub,
+        text: "GitHub",
+        url: "https://github.com/jeringeorge98/ml-notebooks",
+      },
+    ],
+    tech_used: [
+      { icon: SiPython, name: "Python" },
+      { icon: SiDocker, name: "Docker" },
+      { icon: SiFastapi, name: "FastAPI" },
+      { icon: SiPostgresql, name: "PostGreSQL" },
+      { icon: SiTrpc, name: "GRPC" },
     ],
   },
 ];
